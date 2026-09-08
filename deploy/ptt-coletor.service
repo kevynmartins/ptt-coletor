@@ -1,0 +1,20 @@
+[Unit]
+Description=PTT Coletor - servidor relay
+After=network.target
+
+[Service]
+Type=simple
+User=ptt
+WorkingDirectory=/opt/ptt-coletor/server
+EnvironmentFile=/opt/ptt-coletor/server/.env
+ExecStart=/usr/bin/node dist/index.js
+Restart=on-failure
+RestartSec=5
+# Isolamento básico
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/opt/ptt-coletor/server/data
+
+[Install]
+WantedBy=multi-user.target

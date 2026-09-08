@@ -142,6 +142,11 @@ Quando um canal é removido, os coletores que estavam nele são avisados e ficam
 administrador mover cada um para um canal válido (pela aba Canais ou editando o canal padrão da
 conta).
 
+## 6. Deploy em produção (Ubuntu)
+
+Para rodar o servidor de forma permanente num servidor Ubuntu (systemd, reinício automático,
+etc.), veja o guia em [`deploy/UBUNTU_SETUP.md`](deploy/UBUNTU_SETUP.md).
+
 ## Limitações conhecidas / próximos passos
 
 - Áudio trafega sem compressão (PCM cru) — ótimo para qualidade e simplicidade em WiFi local,
