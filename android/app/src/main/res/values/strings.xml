@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">PTT Coletor</string>
+    <string name="subtitle_main">Comunicação por rádio via WiFi</string>
+    <string name="hint_server">IP:porta ou wss://endereço do servidor</string>
+    <string name="hint_username">Usuário</string>
+    <string name="hint_password">Senha</string>
+    <string name="hint_name">Nome de exibição</string>
+    <string name="btn_discover">Buscar servidor na rede</string>
+    <string name="btn_connect">Conectar</string>
+    <string name="btn_ptt">SEGURE PARA FALAR</string>
+    <string name="btn_ptt_talking">FALANDO…</string>
+    <string name="status_disconnected">Desconectado</string>
+    <string name="status_connecting">Conectando…</string>
+    <string name="status_connected">Conectado</string>
+    <string name="label_channel">Canal</string>
+    <string name="label_users">Usuários no canal</string>
+    <string name="notification_channel_name">PTT Coletor</string>
+    <string name="notification_text">Conectado ao canal PTT</string>
+
+    <string name="cd_settings">Configurações</string>
+    <string name="settings_title">Configurações</string>
+
+    <string name="error_fill_fields">Preencha usuário, senha, nome de exibição e o endereço do servidor.</string>
+    <string name="error_login_failed">Usuário ou senha inválidos.</string>
+    <string name="error_mic_denied">Permissão de microfone negada. Sem ela, o app não consegue transmitir áudio.</string>
+    <string name="btn_open_app_settings">Abrir configurações do app</string>
+
+    <string name="discovery_searching">Procurando servidor na rede…</string>
+    <string name="discovery_found">Servidor encontrado: %1$s</string>
+    <string name="discovery_not_found">Nenhum servidor encontrado. Digite o endereço manualmente.</string>
+
+    <string name="hardware_key_section_title">Botão físico do PTT</string>
+    <string name="hardware_key_none">Nenhum botão mapeado ainda</string>
+    <string name="hardware_key_mapped">Botão mapeado: %1$s</string>
+    <string name="hardware_key_learn_btn">Mapear agora</string>
+    <string name="hardware_key_listening">Pressione o botão físico do coletor agora…</string>
+    <string name="hardware_key_remove_btn">Remover mapeamento</string>
+    <string name="hardware_key_mapped_toast">Botão mapeado: %1$s</string>
+    <string name="hardware_key_manual_label">Ou digite o nome da tecla diretamente</string>
+    <string name="hardware_key_manual_hint">Nome da tecla</string>
+    <string name="hardware_key_manual_btn">Definir</string>
+    <string name="hardware_key_manual_example">Ex.: KEYCODE_BUTTON_L2, KEYCODE_BUTTON_L1, KEYCODE_PROG_RED</string>
+    <string name="hardware_key_manual_invalid">Nome de tecla inválido. Copie exatamente como no Android (ex.: KEYCODE_BUTTON_L2).</string>
+    <string name="hardware_key_removed_toast">Mapeamento removido.</string>
+    <string name="hardware_key_instructions">No coletor Zebra TC21, abra o app "Key Programmer" (ou "Programmable Keys"), selecione o botão lateral do PTT e configure para simular uma tecla — não para abrir um aplicativo. Depois volte aqui, toque em "Mapear agora" e pressione esse mesmo botão uma vez.</string>
+
+    <string name="error_ptt_busy">Canal ocupado, aguarde a pessoa soltar o botão.</string>
+    <string name="error_ptt_not_in_channel">Você ainda não entrou em um canal. Aguarde a conexão.</string>
+    <string name="error_kicked_by_admin">Você foi desconectado pelo administrador.</string>
+    <string name="error_connection_host_not_found">Não foi possível encontrar o servidor. Verifique o endereço digitado.</string>
+    <string name="error_connection_refused">Não foi possível conectar ao servidor. Verifique se ele está ligado e na mesma rede.</string>
+    <string name="error_connection_lost">Conexão perdida. Tentando reconectar…</string>
+    <string name="error_mic_permission_runtime">Sem permissão de microfone — não é possível transmitir áudio.</string>
+
+    <string name="empty_channel_hint">Nenhum coletor neste canal</string>
+    <string name="label_you">você</string>
+    <string name="label_speaking_prefix">Falando: %1$s</string>
+
+    <string name="btn_call">Ligar</string>
+    <string name="btn_end_call">Encerrar chamada</string>
+    <string name="label_call_with">Chamada individual com %1$s</string>
+    <string name="call_ended_hangup">Chamada encerrada.</string>
+    <string name="call_ended_peer_disconnected">A outra pessoa saiu da chamada.</string>
+    <string name="error_call_target_offline">Essa pessoa não está mais online.</string>
+    <string name="error_call_already_in_call">Essa pessoa já está em outra chamada.</string>
+    <string name="error_call_not_found">Não foi possível ligar — usuário não encontrado.</string>
+
+    <string name="accessibility_service_label">PTT Coletor — botão físico</string>
+    <string name="accessibility_service_description">Permite que o botão físico do PTT funcione mesmo com outro aplicativo aberto na tela, sem acessar nem interferir no conteúdo de outros apps — só escuta o botão que você mapeou nas configurações do PTT Coletor.</string>
+
+    <string name="background_section_title">Segundo plano</string>
+    <string name="accessibility_section_title">Botão físico fora do app</string>
+    <string name="accessibility_status_enabled">Ativado — o botão físico funciona mesmo com outro app aberto.</string>
+    <string name="accessibility_status_disabled">Desativado — o botão físico só funciona com o PTT Coletor na tela.</string>
+    <string name="btn_open_accessibility_settings">Ativar serviço de acessibilidade</string>
+    <string name="accessibility_instructions">Toque no botão acima, encontre "%1$s" na lista e ative.</string>
+
+    <string name="battery_section_title">Economia de bateria</string>
+    <string name="battery_status_exempt">Ativado — o app não deve ser encerrado pelo economizador de bateria.</string>
+    <string name="battery_status_not_exempt">Desativado — o sistema pode encerrar o app em segundo plano após um tempo.</string>
+    <string name="btn_request_battery_exemption">Permitir funcionamento em segundo plano</string>
+</resources>

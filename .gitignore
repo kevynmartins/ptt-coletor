@@ -1,0 +1,27 @@
+# Server (Node.js)
+server/node_modules/
+server/dist/
+server/data/
+npm-debug.log*
+
+# Android / Gradle
+android/**/build/
+android/.gradle/
+android/local.properties
+android/*.iml
+android/.idea/
+android/captures/
+android/.cxx/
+
+# APKs (gerados pelo build, não versionados)
+*.apk
+*.aab
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+
+# Claude Code local session state
+.claude/

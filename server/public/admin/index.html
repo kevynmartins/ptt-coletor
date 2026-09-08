@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PTT Coletor — Administrador</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loginScreen" class="login-screen">
+    <form id="loginForm" class="login-box">
+      <div class="login-logo">📻</div>
+      <h1>PTT Coletor</h1>
+      <p class="subtitle">Painel de administrador</p>
+      <input id="passwordInput" type="password" placeholder="Senha de administrador" autofocus />
+      <button type="submit">Entrar</button>
+      <p id="loginError" class="error" hidden></p>
+    </form>
+  </div>
+
+  <div id="dashboard" class="dashboard" hidden>
+    <header>
+      <h1>PTT Coletor</h1>
+      <div class="header-right">
+        <span id="wsStatus" class="status-badge status-disconnected">desconectado</span>
+        <button id="logoutBtn" class="secondary">Sair</button>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button type="button" class="tab-btn active" data-tab="talk">Falar e ouvir</button>
+      <button type="button" class="tab-btn" data-tab="users">Usuários</button>
+      <button type="button" class="tab-btn" data-tab="channels">Canais e atividade</button>
+    </nav>
+
+    <div id="tab-talk" class="tab-panel">
+      <section class="panel panel-anim">
+        <h2>Falar e ouvir pelo navegador</h2>
+        <p class="hint">Use o microfone e o fone do computador como se fosse mais um coletor — já entra autenticado como administrador, e pode escolher qualquer canal livremente.</p>
+        <div id="pttPanel" class="ptt-panel">
+          <div class="ptt-controls">
+            <input id="pttName" type="text" placeholder="Nome de exibição" value="Administrador" />
+            <select id="pttChannelSelect"></select>
+            <button id="pttConnectBtn" type="button">Conectar áudio</button>
+            <button id="pttDisconnectBtn" type="button" class="secondary" hidden>Desconectar áudio</button>
+          </div>
+          <div id="pttStatus" class="ptt-status"></div>
+          <button id="pttTalkBtn" class="ptt-talk-btn" type="button" hidden>SEGURE PARA FALAR</button>
+          <button id="pttEndCallBtn" type="button" class="secondary" hidden>Encerrar chamada</button>
+        </div>
+      </section>
+    </div>
+
+    <div id="tab-users" class="tab-panel" hidden>
+      <section class="panel panel-anim">
+        <h2>Usuários</h2>
+        <p class="hint">Contas de login para os coletores acessarem (usuário e senha do app Android). O canal padrão é para onde a pessoa vai automaticamente ao entrar — só o administrador troca o canal de alguém.</p>
+        <form id="createUserForm" class="inline-form">
+          <input id="newUsername" type="text" placeholder="Usuário" />
+          <input id="newUserPassword" type="password" placeholder="Senha" />
+          <select id="newUserChannel"></select>
+          <button type="submit">Criar usuário</button>
+        </form>
+        <ul id="usersList" class="users-list"></ul>
+      </section>
+    </div>
+
+    <div id="tab-channels" class="tab-panel" hidden>
+      <section class="panel panel-anim">
+        <h2>Canais</h2>
+        <form id="createChannelForm" class="inline-form">
+          <input id="newChannelName" type="text" placeholder="Nome do novo canal" />
+          <button type="submit">Criar canal</button>
+        </form>
+        <div id="channelsList" class="channels-grid"></div>
+      </section>
+
+      <section class="panel panel-anim">
+        <h2>Atividade recente</h2>
+        <ul id="activityList" class="activity-list"></ul>
+      </section>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+
+  <div id="confirmOverlay" class="confirm-overlay" hidden>
+    <div class="confirm-box">
+      <p id="confirmMessage"></p>
+      <div class="confirm-actions">
+        <button id="confirmCancelBtn" class="secondary">Cancelar</button>
+        <button id="confirmOkBtn" class="danger">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="editUserOverlay" class="confirm-overlay" hidden>
+    <div class="confirm-box">
+      <h3 id="editUserTitle">Editar usuário</h3>
+      <div class="modal-field">
+        <label for="editUserPassword">Nova senha (deixe em branco para manter a atual)</label>
+        <input id="editUserPassword" type="password" placeholder="Nova senha" />
+      </div>
+      <div class="modal-field">
+        <label for="editUserChannel">Canal padrão</label>
+        <select id="editUserChannel"></select>
+      </div>
+      <div class="confirm-actions">
+        <button id="editUserCancelBtn" class="secondary">Cancelar</button>
+        <button id="editUserSaveBtn">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
